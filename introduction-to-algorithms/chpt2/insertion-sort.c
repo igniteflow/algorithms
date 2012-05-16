@@ -20,7 +20,7 @@ int main(int argc, char **argv)
    for ( j = 1 ; j < 20 ; j++ ) 
    {
        key = a[j];
-       i = j -1;
+       i = j - 1;
        while ( i > 0 && a[i] > key ) {
            a[i + 1] = a[i];
            i = i - 1;
@@ -33,7 +33,5 @@ int main(int argc, char **argv)
        printf(" %d ", a[i]);
    }
    printf("]\n");
-
-   print_to_terminal("hello", a);
 }
 

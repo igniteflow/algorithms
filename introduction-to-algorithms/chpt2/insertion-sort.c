@@ -8,11 +8,11 @@
 */
 int main(int argc, char **argv) 
 {
-   unsigned int a[20] = {16, 7, 4, 10, 18, 15, 6, 12, 13, 5, 11, 14, 17, 8, 2, 9, 19, 3, 1};
-   unsigned int i, j, key;
+   int a[19] = {16, 7, 4, 10, 18, 15, 6, 12, 13, 5, 11, 14, 17, 8, 2, 9, 19, 3, 1};
+   int i, j, key;
 
    printf("Unsorted: [");
-   for ( i = 0; i < 20; i++ ) {
+   for ( i = 0; i < 19; i++ ) {
        printf(" %d ", a[i]);
    }
    printf("]\n");
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
    }
 
    printf("Sorted: [");
-   for ( i = 0; i < 20; i++ ) {
+   for ( i = 0; i < 19; i++ ) {
        printf(" %d ", a[i]);
    }
    printf("]\n");

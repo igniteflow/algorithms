@@ -2,7 +2,7 @@
 
 import random
 
-# generate a shuffled list of numbers 0-19
+# generate a shuffled list of numbers 1-20
 a = range(1, 21)
 random.shuffle(a)
 print 'Unsorted: %s' % a

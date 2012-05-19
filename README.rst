@@ -1,1 +1,1 @@
-Simply somewhere to put my scribblings from following through the book 'Introduction to Algorithms' by Cormen et al. (Third Edition).  Possibly more books will follow, but this thing is huge... so not any time soon!
+Various algorithms implemented in various languages

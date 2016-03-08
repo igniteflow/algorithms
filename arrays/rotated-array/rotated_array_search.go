@@ -1,7 +1,5 @@
 package rotate_array_search
 
-import "fmt"
-
 func binarySearch(array []int, start, end, key int) int {
   if start > end {
     return -1
@@ -22,11 +20,4 @@ func binarySearch(array []int, start, end, key int) int {
 
 func binarySearchRotated(array []int, key int) int {
   return binarySearch(array, 0, len(array) - 1, key)
-}
-
-func main() {
-  array := []int{4,5,6,7,0,1,2}
-  key := 6
-  res := binarySearchRotated(array, key)
-  fmt.Println(res)
 }

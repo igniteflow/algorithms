@@ -1,17 +1,37 @@
-#!/usr/bin/python
+from typing import List
 
-a = [16, 7, 4, 10, 18, 15, 6, 12, 13, 5, 11, 14, 17, 8, 2, 9, 19, 3, 1]
-print 'Unsorted: %s' % a
+"""
+O(n²) in the average and worst case, and O(n) in the best case.
+"""
 
-def insertion_sort(a):
-    for j in range(1, len(a)):
-        key = a[j]
-        i = j - 1
-        while i >= 0 and a[i] > key:
-	    a[i+1] = a[i]
-	    i = i - 1
- 	a[i+1] = key
-    return a
 
-# execute the sort
-print 'Sorted: %s' % insertion_sort(a)
+def insertion_sort(x: List[int]):
+    """
+    For each element in a list, walk backwards until a smaller value is found,
+    then insert the element after that value
+    """
+    # start at the second element as position 0 is already considered sorted
+    for i_idx in range(1, len(x)):
+        # position behind key
+        j_idx = i_idx - 1
+
+        # i starts on second list element
+        key = x[i_idx]
+
+        while j_idx >= 0 and x[j_idx] > key:
+            # move j to the right as it is greater than i
+            x[j_idx + 1] = x[j_idx]
+
+            # walk backwards until we find an element
+            # smaller than key
+            j_idx -= 1
+
+        # j is smaller than key so insert key after j
+        x[j_idx + 1] = key
+    return x
+
+
+if __name__ == "__main__":
+    a = [2, 4, 7, 6, 5, 9, 1, 8, 3]
+    print("Before:", a)
+    print("After:", insertion_sort(a))
